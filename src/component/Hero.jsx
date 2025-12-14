@@ -29,9 +29,9 @@ export default function Hero() {
                         <span className="text-white font-semibold"> Node.js</span>.
                     </p>
 
-                    {/* --- CTA BUTTONS (MUI) --- */}
+                   
                     <div className="flex justify-center md:justify-start gap-4 pt-4">
-                        {/* Primary Button */}
+                       
                         <Button
                             variant="outlined"
                             size="large"
@@ -46,11 +46,11 @@ export default function Hero() {
                             Contact Me
                         </Button>
 
-                        {/* Secondary Button */}
+                       
                         <Button
                             variant="contained"
                             size="large"
-                            href="./public/Amitgupta-merResum.pdf" // Ensure you put a resume.pdf in your 'public' folder
+                            href="./public/Amitgupta-merResum.pdf" 
                             target="_blank"
                             startIcon={<DownloadIcon />}
                             sx={{

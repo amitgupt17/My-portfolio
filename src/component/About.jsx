@@ -11,9 +11,9 @@ export default function About() {
         <section id="about" className="py-24 px-6 relative bg-background">
             <div className="max-w-7xl mx-auto">
 
-                {/* Section Title */}
+            
                 <div className="mb-16">
-                    {/* Using the short variable names we corrected */}
+                   
                     <h2 className="text-3xl md:text-4xl font-bold text-text-head">
                         About <span className="text-accent">Me</span>
                     </h2>
@@ -22,7 +22,6 @@ export default function About() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-start">
 
-                    {/* --- LEFT COLUMN: BIO --- */}
                     <div className="space-y-6 text-lg text-text-main leading-relaxed">
                         <p>
                             Hello! My name is <span className="text-white font-bold">Amit Gupta</span>.
@@ -40,11 +39,11 @@ export default function About() {
                         </p>
                     </div>
 
-                    {/* --- RIGHT COLUMN: SKILLS & HIGHLIGHTS --- */}
+                   
                     <div>
                         <h3 className="text-2xl font-bold text-white mb-6">Tech Stack</h3>
 
-                        {/* Skills Grid */}
+                      
                         <div className="flex flex-wrap gap-3 mb-10">
                             {skills.map((skill) => (
                                 <span
@@ -64,10 +63,9 @@ export default function About() {
                             ))}
                         </div>
 
-                        {/* Feature Cards (MERN Specific) */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-                            {/* Card 1: Frontend */}
+                         
                             <div className="p-4 bg-surface rounded-lg border-l-4 border-accent shadow-lg">
                                 <WebIcon className="text-accent mb-2" fontSize="large" />
                                 <h4 className="font-bold text-white">Frontend Architecture</h4>
@@ -76,7 +74,7 @@ export default function About() {
                                 </p>
                             </div>
 
-                            {/* Card 2: Backend */}
+                           
                             <div className="p-4 bg-surface rounded-lg border-l-4 border-green-500 shadow-lg">
                                 <StorageIcon className="text-green-500 mb-2" fontSize="large" />
                                 <h4 className="font-bold text-white">Backend & DB</h4>

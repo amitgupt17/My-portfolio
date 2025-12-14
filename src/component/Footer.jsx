@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="bg-surface py-8 border-t border-slate-700 mt-auto">
             <div className="max-w-7xl mx-auto px-4 text-center">
 
-                {/* Social Links or Name */}
+                
                 <h2 className="text-2xl font-bold text-white mb-4">Amit Gupta</h2>
 
                 <div className="flex justify-center gap-6 mb-6">

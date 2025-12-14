@@ -7,13 +7,13 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 export default function Contact() {
     const form = useRef();
     const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState(""); // null | "success" | "error"
+    const [status, setStatus] = useState(""); 
 
     const sendEmail = (e) => {
         e.preventDefault();
         setLoading(true);
 
-        // --- FIX: Remove quotes to read the actual variables ---
+       
         const SERVICE_ID = import.meta.env.VITE_API_SERVICE_ID;
         const TEMPLATE_ID = import.meta.env.VITE_API_TEMPLATE_ID;
         const PUBLIC_KEY = import.meta.env.VITE_API_PUBLIC_KEY;
@@ -22,8 +22,8 @@ export default function Contact() {
             .then((result) => {
                 setLoading(false);
                 setStatus("success");
-                e.target.reset(); // Clear the form
-                setTimeout(() => setStatus(""), 5000); // Remove message after 5 seconds
+                e.target.reset(); 
+                setTimeout(() => setStatus(""), 5000); 
             }, (error) => {
                 setLoading(false);
                 setStatus("error");
@@ -35,7 +35,7 @@ export default function Contact() {
         <section id="contact" className="py-24 px-6">
             <div className="max-w-6xl mx-auto">
 
-                {/* Section Heading */}
+              
                 <div className="mb-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-text-head">
                         Get In <span className="text-accent">Touch</span>
@@ -49,7 +49,7 @@ export default function Contact() {
 
                 <div className="grid md:grid-cols-2 gap-12">
 
-                    {/* --- LEFT SIDE: Contact Info --- */}
+                  
                     <div className="space-y-8">
                         <div className="space-y-4">
                             <div className="flex items-center gap-4">
@@ -74,7 +74,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* --- RIGHT SIDE: The Form --- */}
+                   
                     <form 
                         ref={form} 
                         onSubmit={sendEmail} 
@@ -82,7 +82,7 @@ export default function Contact() {
                     >
 
                         <div className="grid md:grid-cols-2 gap-6">
-                            {/* Name Input */}
+                           
                             <div className="space-y-2">
                                 <label className="text-sm font-medium text-slate-300">Name</label>
                                 <input
@@ -94,7 +94,7 @@ export default function Contact() {
                                 />
                             </div>
 
-                            {/* Email Input */}
+                            
                             <div className="space-y-2">
                                 <label className="text-sm font-medium text-slate-300">Email</label>
                                 <input
@@ -102,13 +102,12 @@ export default function Contact() {
                                     name="user_email"
                                     required
                                     placeholder="john@example.com"
-                                    // FIX: Fixed typo 'bg--background' to 'bg-background'
+                                    
                                     className="w-full px-4 py-3 rounded-lg bg-background border border-slate-600 text-white focus:outline-none focus:border-accent transition"
                                 />
                             </div>
                         </div>
 
-                        {/* Message Input */}
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-slate-300">Message</label>
                             <textarea
@@ -120,7 +119,7 @@ export default function Contact() {
                             ></textarea>
                         </div>
 
-                        {/* Submit Button */}
+                      
                         <button
                             type="submit"
                             disabled={loading}
@@ -132,7 +131,7 @@ export default function Contact() {
                             {!loading && <SendIcon fontSize="small" />}
                         </button>
 
-                        {/* Success/Error Message */}
+                       
                         {status === "success" && (
                             <p className="text-green-400 text-center text-sm mt-2">Message sent successfully!</p>
                         )}

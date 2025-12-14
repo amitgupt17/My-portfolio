@@ -18,7 +18,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import EmailIcon from '@mui/icons-material/Email';
 
-// Data Structure: Array of Objects
+
 const navItems = [
     { label: 'Home', icon: <HomeIcon /> },
     { label: 'About', icon: <PersonIcon /> },
@@ -31,7 +31,6 @@ export default function Navbar(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
-    // --- MOBILE DRAWER (Pop-out Menu) ---
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2, color: 'var(--color-accent)', fontWeight: 'bold' }}>
@@ -39,19 +38,18 @@ export default function Navbar(props) {
             </Typography>
             <List>
                 {navItems.map((item) => (
-                    // FIX 1: Use item.label for key
+                  
                     <ListItem key={item.label} disablePadding>
                         <ListItemButton 
                             component="a" 
-                            // FIX 2: Use item.label for href
                             href={`#${item.label.toLowerCase()}`} 
                             sx={{ textAlign: 'left', pl: 4 }}
                         >
-                            {/* FIX 3: Render item.icon */}
+                            
                             <ListItemIcon sx={{ color: 'var(--color-accent)', minWidth: '40px' }}>
                                 {item.icon}
                             </ListItemIcon>
-                            {/* FIX 4: Render item.label text */}
+                          
                             <ListItemText primary={item.label} sx={{ color: 'var(--color-text-main)' }} />
                         </ListItemButton>
                     </ListItem>
@@ -90,13 +88,13 @@ export default function Navbar(props) {
                                 key={item.label} 
                                 component="a"
                                 href={`#${item.label.toLowerCase()}`}
-                                // FIX 5: Add startIcon prop to show icon on Desktop
+                                
                                 startIcon={item.icon}
                                 sx={{ 
                                     color: '#fff', 
                                     mx: 1,
                                     '&:hover': { color: 'var(--color-accent)' },
-                                    // Ensure the icon also turns accent color on hover if needed
+                                    
                                     '& .MuiButton-startIcon': { color: 'var(--color-accent)' }
                                 }}
                             >
