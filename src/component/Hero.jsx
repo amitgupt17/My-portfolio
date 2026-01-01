@@ -50,7 +50,7 @@ export default function Hero() {
                         <Button
                             variant="contained"
                             size="large"
-                            href="./public/Amitgupta-merResum.pdf" 
+                            href="./public/AMITgupjobres.pdf" 
                             target="_blank"
                             startIcon={<DownloadIcon />}
                             sx={{

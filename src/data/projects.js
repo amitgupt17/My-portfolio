@@ -18,5 +18,14 @@ export const projects = [
     img: "/wea.png",
     github: "https://github.com/amitgupt17/SkyCast-weather",
     demo: "https://sky-cast-weather-ecru.vercel.app"
+  },
+  {
+    id: 3,
+    title: "Nexus GPT - AI Agent Platform",
+    description: "A full-stack AI platform for deploying customized GPT agents. Features persistent conversational threads and automated workflow management with real-time AI responses.",
+    tech: ["React.js", "Node.js", "OpenAI API", "REST API", "Vanilla CSS"],
+    img: "/nexus.png",
+    github: "https://github.com/amitgupt17/Nexus-GPT",
+    demo: "https://nexusgpt-rosy.vercel.app"
   }
 ];
